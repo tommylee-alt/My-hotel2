@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Enjoy fresh, thoughtfully prepared food at MyRestaurant.">
+    <title>MyRestaurant | Fresh, Delicious Dining</title>
+    <link rel="stylesheet" href="restourant.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="#home">MyRestaurant</a>
+        <nav class="navbar" aria-label="Main navigation">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <a href="#services">Services</a>
+            <a href="#reservation">Reservation</a>
+            <a href="#response">Feedback</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <p class="eyebrow">Good food, good company</p>
+                <h1>Welcome to MyRestaurant</h1>
+                <p>Experience fresh ingredients, thoughtful cooking, and a warm welcome every time.</p>
+                <a class="button" href="#reservation">Reserve a table</a>
+            </div>
+        </section>
+
+        <section id="about" class="section about">
+            <p class="eyebrow">Our story</p>
+            <h2>About Us</h2>
+            <p>At MyRestaurant, we believe memorable meals start with quality ingredients and are made even better when shared. Our team is here to make every visit feel special.</p>
+        </section>
+
+        <section id="menu" class="section menu">
+            <p class="eyebrow">Made fresh for you</p>
+            <h2>Explore Our Menu</h2>
+            <p class="menu-intro">Choose a category to see some of our guest favorites.</p>
+            <ul class="menu-list">
+                <li>
+                    <details class="menu-category">
+                        <summary>
+                            <span class="category-name">Appetizers</span>
+                            <span class="category-hint">Start with something delicious</span>
+                        </summary>
+                        <ul class="dish-list">
+                            <li><span>Bruschetta</span><span>Toasted bread with tomato, basil, and olive oil</span></li>
+                            <li><span>Crispy calamari</span><span>Lightly fried and served with lemon</span></li>
+                            <li><span>Garlic bread</span><span>Warm bread with garlic butter and herbs</span></li>
+                            <li><span>Soup of the day</span><span>Ask us what the kitchen is preparing</span></li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details class="menu-category">
+                        <summary>
+                            <span class="category-name">Main courses</span>
+                            <span class="category-hint">Seasonal favorites and classics</span>
+                        </summary>
+                        <ul class="dish-list">
+                            <li><span>Roast chicken</span><span>Herb-roasted chicken with seasonal vegetables</span></li>
+                            <li><span>Grilled salmon</span><span>Served with lemon and your choice of sides</span></li>
+                            <li><span>Garden pasta</span><span>Pasta tossed with vegetables and fresh herbs</span></li>
+                            <li><span>Vegetable risotto</span><span>Creamy rice with seasonal vegetables</span></li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details class="menu-category">
+                        <summary>
+                            <span class="category-name">Desserts</span>
+                            <span class="category-hint">A sweet finish to your meal</span>
+                        </summary>
+                        <ul class="dish-list">
+                            <li><span>Chocolate cake</span><span>Rich chocolate cake, served by the slice</span></li>
+                            <li><span>Classic cheesecake</span><span>Creamy cheesecake with a crumb crust</span></li>
+                            <li><span>Seasonal fruit plate</span><span>A fresh selection of seasonal fruit</span></li>
+                            <li><span>Ice cream</span><span>Ask about today's available flavors</span></li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details class="menu-category">
+                        <summary>
+                            <span class="category-name">Beverages</span>
+                            <span class="category-hint">Drinks to complement every dish</span>
+                        </summary>
+                        <ul class="dish-list">
+                            <li><span>Fresh lemonade</span><span>House lemonade served chilled</span></li>
+                            <li><span>Still or sparkling water</span><span>Choose your preferred water</span></li>
+                            <li><span>Coffee and tea</span><span>A selection of hot drinks</span></li>
+                            <li><span>Soft drinks</span><span>Ask your server for available options</span></li>
+                        </ul>
+                    </details>
+                </li>
+            </ul>
+        </section>
+
+        <section class="section specials">
+            <p class="eyebrow">A little something special</p>
+            <h2>Chef's Specials</h2>
+            <p>Discover our chef's special creations, prepared with fresh ingredients and inspired by the season.</p>
+        </section>
+
+        <section id="services" class="section services">
+            <p class="eyebrow">Here for every occasion</p>
+            <h2>Our Services</h2>
+            <p>Enjoy a relaxed dine-in experience, friendly service, and a welcoming space for meals with friends, family, or colleagues.</p>
+        </section>
+
+        <section id="reservation" class="section reservation">
+            <p class="eyebrow">We saved you a seat</p>
+            <h2>Make a Reservation</h2>
+            <form class="reservation-form" action="#" method="get">
+                <div class="form-field">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" autocomplete="name" required placeholder="John Kariuki">
+                </div>
+                <div class="form-field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" autocomplete="email" required placeholder="example123@gmail.com">
+                </div>
+                <div class="form-field">
+                    <label for="date">Date</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-field">
+                    <label for="time">Time</label>
+                    <input type="time" id="time" name="time" required>
+                </div>
+                <div class="form-field">
+                    <label for="guests">Number of guests</label>
+                    <input type="number" id="guests" name="guests" min="1" value="2" required>
+                </div>
+                <div class="form-field">
+                    <label for="phone-number">Phone Number</label>
+                    <input type="tel" id="phone-number" name="phone-number" autocomplete="tel" required placeholder="0780276514">
+                </div>
+                <button class="button" type="submit">Request a reservation</button>
+            </form>
+        </section>
+
+        <section id="response" class="section-response">
+            <p class="eyebrow">Help us do better</p>
+            <h2>Share Your Experience</h2>
+            <p class="response-intro">Rate your visit and let us know what you enjoyed or how we can improve.</p>
+            <form class="response-form" action="#" method="get">
+                <fieldset class="rating-field">
+                    <legend>Dine-in experience</legend>
+                    <div class="rating-options">
+                        <label><input type="radio" name="dine-in-rating" value="1" required><span aria-hidden="true">★</span><span class="visually-hidden">1 star</span></label>
+                        <label><input type="radio" name="dine-in-rating" value="2"><span aria-hidden="true">★</span><span class="visually-hidden">2 stars</span></label>
+                        <label><input type="radio" name="dine-in-rating" value="3"><span aria-hidden="true">★</span><span class="visually-hidden">3 stars</span></label>
+                        <label><input type="radio" name="dine-in-rating" value="4"><span aria-hidden="true">★</span><span class="visually-hidden">4 stars</span></label>
+                        <label><input type="radio" name="dine-in-rating" value="5"><span aria-hidden="true">★</span><span class="visually-hidden">5 stars</span></label>
+                    </div>
+                </fieldset>
+                <fieldset class="rating-field">
+                    <legend>Staff service</legend>
+                    <div class="rating-options">
+                        <label><input type="radio" name="staff-rating" value="1" required><span aria-hidden="true">★</span><span class="visually-hidden">1 star</span></label>
+                        <label><input type="radio" name="staff-rating" value="2"><span aria-hidden="true">★</span><span class="visually-hidden">2 stars</span></label>
+                        <label><input type="radio" name="staff-rating" value="3"><span aria-hidden="true">★</span><span class="visually-hidden">3 stars</span></label>
+                        <label><input type="radio" name="staff-rating" value="4"><span aria-hidden="true">★</span><span class="visually-hidden">4 stars</span></label>
+                        <label><input type="radio" name="staff-rating" value="5"><span aria-hidden="true">★</span><span class="visually-hidden">5 stars</span></label>
+                    </div>
+                </fieldset>
+                <fieldset class="rating-field">
+                    <legend>Food quality</legend>
+                    <div class="rating-options">
+                        <label><input type="radio" name="food-rating" value="1" required><span aria-hidden="true">★</span><span class="visually-hidden">1 star</span></label>
+                        <label><input type="radio" name="food-rating" value="2"><span aria-hidden="true">★</span><span class="visually-hidden">2 stars</span></label>
+                        <label><input type="radio" name="food-rating" value="3"><span aria-hidden="true">★</span><span class="visually-hidden">3 stars</span></label>
+                        <label><input type="radio" name="food-rating" value="4"><span aria-hidden="true">★</span><span class="visually-hidden">4 stars</span></label>
+                        <label><input type="radio" name="food-rating" value="5"><span aria-hidden="true">★</span><span class="visually-hidden">5 stars</span></label>
+                    </div>
+                </fieldset>
+                <fieldset class="rating-field">
+                    <legend>Atmosphere and cleanliness</legend>
+                    <div class="rating-options">
+                        <label><input type="radio" name="atmosphere-rating" value="1" required><span aria-hidden="true">★</span><span class="visually-hidden">1 star</span></label>
+                        <label><input type="radio" name="atmosphere-rating" value="2"><span aria-hidden="true">★</span><span class="visually-hidden">2 stars</span></label>
+                        <label><input type="radio" name="atmosphere-rating" value="3"><span aria-hidden="true">★</span><span class="visually-hidden">3 stars</span></label>
+                        <label><input type="radio" name="atmosphere-rating" value="4"><span aria-hidden="true">★</span><span class="visually-hidden">4 stars</span></label>
+                        <label><input type="radio" name="atmosphere-rating" value="5"><span aria-hidden="true">★</span><span class="visually-hidden">5 stars</span></label>
+                    </div>
+                </fieldset>
+                <div class="comment-field">
+                    <label for="feedback-comment">Comments (optional)</label>
+                    <textarea id="feedback-comment" name="comment" rows="5" placeholder="Tell us what you enjoyed or what we could improve..."></textarea>
+                </div>
+                <button class="button" type="submit">Send feedback</button>
+            </form>
+        </section>
+    </main>
+
+    <footer id="contact" class="site-footer">
+        <h2>Visit MyRestaurant</h2>
+        <p>We look forward to welcoming you.</p>
+        <a href="mailto:hello@myrestaurant.example">hello@myrestaurant.example</a> |
+        <a href="tel:+254790862416">contact us at 0790862416</a>
+        <p class="copyright">&copy; 2026 MyRestaurant</p>
+    </footer>
+</body>
+</html>
