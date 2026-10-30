@@ -139,35 +139,85 @@ a {
 
 .menu-list {
     display: grid;
-    max-width: 42rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+    max-width: 70rem;
     margin: 2rem auto 0;
     padding: 0;
-    gap: 0.75rem;
+    gap: 1rem;
     list-style: none;
     text-align: left;
 }
 
-.menu-list li {
+.menu-list > li {
     border-radius: 0.5rem;
-    background: var(--color-paper);
-    box-shadow: 0 2px 8px rgb(41 37 31 / 6%);
-    transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease;
+    box-shadow: 0 5px 16px rgb(41 37 31 / 12%);
+    transition: transform 220ms ease, box-shadow 220ms ease;
 }
 
 .menu-list > li:hover,
 .menu-list > li:focus-within {
     transform: translateY(-4px);
-    background: #fffaf3;
     box-shadow: 0 10px 24px rgb(166 75 42 / 14%);
+}
+
+.menu-category {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    min-height: 11rem;
+    border-radius: 0.5rem;
+    background: var(--color-paper);
+}
+
+.menu-category::before {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background-position: center;
+    background-size: cover;
+    content: "";
+    transition: transform 300ms ease;
+}
+
+.menu-list > li:hover .menu-category::before,
+.menu-list > li:focus-within .menu-category::before {
+    transform: scale(1.05);
+}
+
+.menu-category--appetizers::before {
+    background-image:
+        linear-gradient(90deg, rgb(24 22 17 / 78%), rgb(24 22 17 / 24%)),
+        url("https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=85");
+}
+
+.menu-category--mains::before {
+    background-image:
+        linear-gradient(90deg, rgb(24 22 17 / 78%), rgb(24 22 17 / 24%)),
+        url("https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=900&q=85");
+}
+
+.menu-category--desserts::before {
+    background-image:
+        linear-gradient(90deg, rgb(24 22 17 / 78%), rgb(24 22 17 / 24%)),
+        url("https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=85");
+}
+
+.menu-category--beverages::before {
+    background-image:
+        linear-gradient(90deg, rgb(24 22 17 / 78%), rgb(24 22 17 / 24%)),
+    url("https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=900&q=85");
 }
 
 .menu-category summary {
     position: relative;
+    z-index: 1;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 0.75rem 1rem;
-    padding: 1rem 1.25rem;
+    min-height: 11rem;
+    padding: 1.25rem;
+    color: white;
     cursor: pointer;
     list-style: none;
 }
@@ -180,8 +230,8 @@ a {
     width: 0.55rem;
     height: 0.55rem;
     flex: 0 0 auto;
-    border-right: 2px solid var(--color-accent);
-    border-bottom: 2px solid var(--color-accent);
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
     content: "";
     transform: rotate(45deg);
     transition: transform 220ms ease;
@@ -193,7 +243,7 @@ a {
 
 .menu-category summary:focus-visible {
     border-radius: 0.5rem;
-    outline: 2px solid var(--color-accent);
+    outline: 2px solid white;
     outline-offset: -3px;
 }
 
@@ -202,16 +252,19 @@ a {
 }
 
 .category-hint {
-    color: var(--color-muted);
+    color: rgb(255 255 255 / 90%);
     font-size: 0.9rem;
     text-align: right;
 }
 
 .dish-list {
+    position: relative;
+    z-index: 1;
     display: grid;
     margin: 0;
     padding: 0.25rem 1.25rem 1rem;
     gap: 0.65rem;
+    background: rgb(255 253 249 / 96%);
     list-style: none;
 }
 
@@ -450,6 +503,39 @@ a {
 
 .response-form .button {
     grid-column: 1 / -1;
+}
+
+.button:disabled {
+    cursor: wait;
+    opacity: 0.7;
+}
+
+.submission-dialog {
+    width: min(90vw, 26rem);
+    padding: 0;
+    border: 1px solid #e6ddd1;
+    border-radius: 0.5rem;
+    background: var(--color-paper);
+    color: var(--color-ink);
+    box-shadow: 0 18px 48px rgb(41 37 31 / 24%);
+}
+
+.submission-dialog::backdrop {
+    background: rgb(41 37 31 / 55%);
+}
+
+.submission-dialog-content {
+    padding: 1.5rem;
+}
+
+.submission-dialog h2 {
+    margin: 0 0 0.5rem;
+    font-size: 1.4rem;
+}
+
+.submission-dialog p {
+    margin: 0 0 1.25rem;
+    color: var(--color-muted);
 }
 
 .site-footer {
