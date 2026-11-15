@@ -1,0 +1,4 @@
+project_id = "zutanbbpbbbomhophven"
+
+[functions.reserve-table]
+verify_jwt = true
